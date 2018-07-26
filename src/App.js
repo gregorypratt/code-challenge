@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
+import SearchResults from './SearchResults';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      query: ''
+      query: '',
+      data: {}
     };
   }
 
   storeResults(data) {
     this.setState({
-      data
+      data: JSON.parse(data)
     });
   }
 
@@ -32,8 +34,11 @@ class App extends Component {
   }
 
   render() {
+    const { data } = this.state;
+    console.log(data);
+
     return (
-      <div className="u-text u-window-box-super">
+      <div className="o-container o-container--large u-text u-window-box-super">
         <header>
           <h1 className="c-heading u-large">Search The Movie Database</h1>
         </header>
@@ -47,6 +52,7 @@ class App extends Component {
             onChange={(e) => this.search(e)}
           />
         </p>
+        <SearchResults {...data} />
       </div>
     );
   }
