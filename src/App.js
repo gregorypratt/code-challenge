@@ -44,6 +44,7 @@ class App extends Component {
         </header>
         <p className="c-paragraph">
           <input
+            autoFocus
             className="c-field"
             placeholder="e.g Fight Club"
             type="text"
