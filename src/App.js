@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import debounce from 'debounce';
 import SearchResults from './SearchResults';
 
 class App extends Component {
@@ -23,24 +24,27 @@ class App extends Component {
     });
   }
 
-  search(e) {
+  search = debounce((query) => {
+    window.theMovieDb.search.getMovie({ query }, (data) => this.storeResults(data), (data) => this.handleError(data));
+  }, 1000);
+
+  handleInput(e) {
     const query = e.target.value;
 
     this.setState({
       query
     });
 
-    window.theMovieDb.search.getMovie({ query }, (data) => this.storeResults(data), (data) => this.handleError(data));
+    this.search(query);
   }
 
   render() {
     const { data } = this.state;
-    console.log(data);
 
     return (
-      <div className="o-container o-container--large u-text u-window-box-super">
+      <div className="o-container o-container--large u-text u-window-box-medium">
         <header>
-          <h1 className="c-heading u-large">Search The Movie Database</h1>
+          <h1 className="c-heading u-super">Search The Movie Database</h1>
         </header>
         <p className="c-paragraph">
           <input
@@ -49,8 +53,7 @@ class App extends Component {
             placeholder="e.g Fight Club"
             type="text"
             value={this.state.query}
-            onInput={(e) => this.search(e)}
-            onChange={(e) => this.search(e)}
+            onInput={(e) => this.handleInput(e)}
           />
         </p>
         <SearchResults {...data} />
