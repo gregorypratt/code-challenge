@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App renders heading and search box 1`] = `
+<App>
+  <div
+    className="o-container o-container--large u-text u-window-box-medium"
+  >
+    <header>
+      <h1
+        className="c-heading u-super"
+      >
+        Search The Movie Database
+      </h1>
+    </header>
+    <p
+      className="c-paragraph"
+    >
+      <input
+        autoFocus={true}
+        className="c-field"
+        onInput={[Function]}
+        placeholder="e.g Fight Club"
+        type="text"
+        value=""
+      />
+    </p>
+    <SearchResults>
+      <section>
+        <div
+          className="o-grid o-grid--wrap"
+        />
+      </section>
+    </SearchResults>
+  </div>
+</App>
+`;

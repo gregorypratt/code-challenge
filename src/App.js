@@ -18,9 +18,9 @@ class App extends Component {
     });
   }
 
-  handleError({ errors }) {
+  handleError() {
     this.setState({
-      errors,
+      error: true,
       data: null,
       searching: false
     });
