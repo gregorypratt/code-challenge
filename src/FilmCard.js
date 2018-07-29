@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import LazyImage from './LazyImage';
 
 class FilmCard extends PureComponent {
   state = {
@@ -35,8 +36,9 @@ class FilmCard extends PureComponent {
   render() {
     const { title, poster_path: posterPath, overview, release_date: releaseDate, vote_average: rating } = this.props;
     const { isOpen, credits = {} } = this.state;
-    const imageClasses = isOpen ? '' : 'o-image';
-    const modalClasses = isOpen ? 'o-modal o-modal--visible' : '';
+    const ratingPercentage = Math.floor(rating * 10);
+    const imageClasses = isOpen ? 'u-highest' : 'o-image';
+    const modalClasses = isOpen ? 'o-modal o-modal--visible o-container o-container--small' : '';
     const modalRole = isOpen ? 'dialog' : '';
 
     return (
@@ -45,10 +47,12 @@ class FilmCard extends PureComponent {
         <div role={modalRole} className={modalClasses}>
           <div className="c-card u-highest">
             <div className="u-centered">
-              <img className={imageClasses} alt={title} src={`https://image.tmdb.org/t/p/w200${posterPath}`} />
+              <LazyImage classes={imageClasses} alt={title} src={`https://image.tmdb.org/t/p/w200${posterPath}`} />
             </div>
             <header className="c-card__header">
-              <h2 className="c-heading" style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+              <h2
+                className="c-heading u-medium"
+                style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
                 {title}
                 {isOpen && (
                   <div className="c-heading__sub">
@@ -61,7 +65,18 @@ class FilmCard extends PureComponent {
             </header>
             {isOpen && (
               <div className="c-card__body o-panel" style={{ height: '220px' }}>
-                {isOpen && <div>Rating: {rating}/10</div>}
+                <h3 className="c-heading">Rating:</h3>
+                <div className="c-progress c-progress--rounded">
+                  <div
+                    role="progressbar"
+                    aria-valuenow={ratingPercentage}
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    style={{ width: `${ratingPercentage}%` }}
+                    className="c-progress__bar c-progress__bar--brand">
+                    {ratingPercentage}%
+                  </div>
+                </div>
                 <h3 className="c-heading">Overview</h3>
                 {overview}
                 <h3 className="c-heading">Cast</h3>

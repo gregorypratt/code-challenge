@@ -13,14 +13,16 @@ class App extends Component {
 
   storeResults(data) {
     this.setState({
-      data: JSON.parse(data)
+      data: JSON.parse(data),
+      searching: false
     });
   }
 
   handleError({ errors }) {
     this.setState({
       errors,
-      data: null
+      data: null,
+      searching: false
     });
   }
 
@@ -32,14 +34,15 @@ class App extends Component {
     const query = e.target.value;
 
     this.setState({
-      query
+      query,
+      searching: true
     });
 
     this.search(query);
   }
 
   render() {
-    const { data } = this.state;
+    const { data, searching } = this.state;
 
     return (
       <div className="o-container o-container--large u-text u-window-box-medium">
@@ -56,7 +59,7 @@ class App extends Component {
             onInput={(e) => this.handleInput(e)}
           />
         </p>
-        <SearchResults {...data} />
+        {searching ? 'Searching....' : <SearchResults {...data} />}
       </div>
     );
   }

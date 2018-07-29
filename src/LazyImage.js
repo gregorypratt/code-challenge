@@ -36,7 +36,7 @@ class LazyImage extends PureComponent {
 
   render() {
     return (
-      <img ref={this.elem} alt={this.props.alt} className="o-image" src={this.state.src} />
+      <img ref={this.elem} alt={this.props.alt} className={this.props.classes} src={this.state.src} />
     );
   }
 }
