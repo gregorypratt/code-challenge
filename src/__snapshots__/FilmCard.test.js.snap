@@ -1,0 +1,494 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilmCard change state on open 1`] = `
+<FilmCard
+  overview="this is a test"
+  poster_path="/test-img-path"
+  release_date="1999-01-01"
+  title="test movie"
+  vote_average="8.8"
+>
+  <div>
+    <div
+      aria-hidden={true}
+      className="c-overlay c-overlay--visible"
+      onClick={[Function]}
+    />
+    <div
+      className="o-modal o-modal--visible o-container o-container--small"
+      role="dialog"
+    >
+      <div
+        className="c-card u-highest"
+      >
+        <div
+          className="u-centered"
+        >
+          <LazyImage
+            alt="test movie"
+            classes="u-highest"
+            src="https://image.tmdb.org/t/p/w200/test-img-path"
+          >
+            <img
+              alt="test movie"
+              className="u-highest"
+              src="https://image.tmdb.org/t/p/w200/test-img-path"
+            />
+          </LazyImage>
+        </div>
+        <header
+          className="c-card__header"
+        >
+          <h2
+            className="c-heading u-medium"
+            style={
+              Object {
+                "overflow": "hidden",
+                "textOverflow": "ellipsis",
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            test movie
+            <div
+              className="c-heading__sub"
+            >
+              Released:
+              <br />
+              Fri Jan 01 1999
+            </div>
+          </h2>
+        </header>
+        <div
+          className="c-card__body o-panel"
+          style={
+            Object {
+              "height": "220px",
+            }
+          }
+        >
+          <h3
+            className="c-heading"
+          >
+            Rating:
+          </h3>
+          <div
+            className="c-progress c-progress--rounded"
+          >
+            <div
+              aria-valuemax="100"
+              aria-valuemin="0"
+              aria-valuenow={88}
+              className="c-progress__bar c-progress__bar--brand"
+              role="progressbar"
+              style={
+                Object {
+                  "width": "88%",
+                }
+              }
+            >
+              88
+              %
+            </div>
+          </div>
+          <h3
+            className="c-heading"
+          >
+            Overview
+          </h3>
+          this is a test
+          <h3
+            className="c-heading"
+          >
+            Cast
+          </h3>
+        </div>
+        <footer
+          className="c-card__footer"
+        >
+          <div
+            className="c-input-group"
+          >
+            <button
+              className="c-button c-button--block c-button--brand"
+              onClick={[Function]}
+            >
+              Close
+            </button>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </div>
+</FilmCard>
+`;
+
+exports[`FilmCard changes classes on open 1`] = `
+<FilmCard
+  overview="this is a test"
+  poster_path="/test-img-path"
+  release_date="1999-01-01"
+  title="test movie"
+  vote_average="8.8"
+>
+  <div>
+    <div
+      aria-hidden={true}
+      className="c-overlay c-overlay--visible"
+      onClick={[Function]}
+    />
+    <div
+      className="o-modal o-modal--visible o-container o-container--small"
+      role="dialog"
+    >
+      <div
+        className="c-card u-highest"
+      >
+        <div
+          className="u-centered"
+        >
+          <LazyImage
+            alt="test movie"
+            classes="u-highest"
+            src="https://image.tmdb.org/t/p/w200/test-img-path"
+          >
+            <img
+              alt="test movie"
+              className="u-highest"
+              src="https://image.tmdb.org/t/p/w200/test-img-path"
+            />
+          </LazyImage>
+        </div>
+        <header
+          className="c-card__header"
+        >
+          <h2
+            className="c-heading u-medium"
+            style={
+              Object {
+                "overflow": "hidden",
+                "textOverflow": "ellipsis",
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            test movie
+            <div
+              className="c-heading__sub"
+            >
+              Released:
+              <br />
+              Fri Jan 01 1999
+            </div>
+          </h2>
+        </header>
+        <div
+          className="c-card__body o-panel"
+          style={
+            Object {
+              "height": "220px",
+            }
+          }
+        >
+          <h3
+            className="c-heading"
+          >
+            Rating:
+          </h3>
+          <div
+            className="c-progress c-progress--rounded"
+          >
+            <div
+              aria-valuemax="100"
+              aria-valuemin="0"
+              aria-valuenow={88}
+              className="c-progress__bar c-progress__bar--brand"
+              role="progressbar"
+              style={
+                Object {
+                  "width": "88%",
+                }
+              }
+            >
+              88
+              %
+            </div>
+          </div>
+          <h3
+            className="c-heading"
+          >
+            Overview
+          </h3>
+          this is a test
+          <h3
+            className="c-heading"
+          >
+            Cast
+          </h3>
+        </div>
+        <footer
+          className="c-card__footer"
+        >
+          <div
+            className="c-input-group"
+          >
+            <button
+              className="c-button c-button--block c-button--brand"
+              onClick={[Function]}
+            >
+              Close
+            </button>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </div>
+</FilmCard>
+`;
+
+exports[`FilmCard does not fail on mount with no props 1`] = `
+<FilmCard>
+  <div>
+    <div
+      className=""
+      role=""
+    >
+      <div
+        className="c-card u-highest"
+      >
+        <div
+          className="u-centered"
+        >
+          <LazyImage
+            classes="o-image"
+            src="https://image.tmdb.org/t/p/w200undefined"
+          >
+            <img
+              className="o-image"
+              src="https://image.tmdb.org/t/p/w200undefined"
+            />
+          </LazyImage>
+        </div>
+        <header
+          className="c-card__header"
+        >
+          <h2
+            className="c-heading u-medium"
+            style={
+              Object {
+                "overflow": "hidden",
+                "textOverflow": "ellipsis",
+                "whiteSpace": "nowrap",
+              }
+            }
+          />
+        </header>
+        <footer
+          className="c-card__footer"
+        >
+          <div
+            className="c-input-group"
+          >
+            <button
+              className="c-button c-button--block c-button--brand"
+              onClick={[Function]}
+            >
+              View
+            </button>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </div>
+</FilmCard>
+`;
+
+exports[`FilmCard fetches the credits on open 1`] = `
+<FilmCard
+  overview="this is a test"
+  poster_path="/test-img-path"
+  release_date="1999-01-01"
+  title="test movie"
+  vote_average="8.8"
+>
+  <div>
+    <div
+      aria-hidden={true}
+      className="c-overlay c-overlay--visible"
+      onClick={[Function]}
+    />
+    <div
+      className="o-modal o-modal--visible o-container o-container--small"
+      role="dialog"
+    >
+      <div
+        className="c-card u-highest"
+      >
+        <div
+          className="u-centered"
+        >
+          <LazyImage
+            alt="test movie"
+            classes="u-highest"
+            src="https://image.tmdb.org/t/p/w200/test-img-path"
+          >
+            <img
+              alt="test movie"
+              className="u-highest"
+              src="https://image.tmdb.org/t/p/w200/test-img-path"
+            />
+          </LazyImage>
+        </div>
+        <header
+          className="c-card__header"
+        >
+          <h2
+            className="c-heading u-medium"
+            style={
+              Object {
+                "overflow": "hidden",
+                "textOverflow": "ellipsis",
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            test movie
+            <div
+              className="c-heading__sub"
+            >
+              Released:
+              <br />
+              Fri Jan 01 1999
+            </div>
+          </h2>
+        </header>
+        <div
+          className="c-card__body o-panel"
+          style={
+            Object {
+              "height": "220px",
+            }
+          }
+        >
+          <h3
+            className="c-heading"
+          >
+            Rating:
+          </h3>
+          <div
+            className="c-progress c-progress--rounded"
+          >
+            <div
+              aria-valuemax="100"
+              aria-valuemin="0"
+              aria-valuenow={88}
+              className="c-progress__bar c-progress__bar--brand"
+              role="progressbar"
+              style={
+                Object {
+                  "width": "88%",
+                }
+              }
+            >
+              88
+              %
+            </div>
+          </div>
+          <h3
+            className="c-heading"
+          >
+            Overview
+          </h3>
+          this is a test
+          <h3
+            className="c-heading"
+          >
+            Cast
+          </h3>
+        </div>
+        <footer
+          className="c-card__footer"
+        >
+          <div
+            className="c-input-group"
+          >
+            <button
+              className="c-button c-button--block c-button--brand"
+              onClick={[Function]}
+            >
+              Close
+            </button>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </div>
+</FilmCard>
+`;
+
+exports[`FilmCard is unopened 1`] = `
+<FilmCard
+  overview="this is a test"
+  poster_path="/test-img-path"
+  release_date="1999-01-01"
+  title="test movie"
+  vote_average="8.8"
+>
+  <div>
+    <div
+      className=""
+      role=""
+    >
+      <div
+        className="c-card u-highest"
+      >
+        <div
+          className="u-centered"
+        >
+          <LazyImage
+            alt="test movie"
+            classes="o-image"
+            src="https://image.tmdb.org/t/p/w200/test-img-path"
+          >
+            <img
+              alt="test movie"
+              className="o-image"
+              src="https://image.tmdb.org/t/p/w200/test-img-path"
+            />
+          </LazyImage>
+        </div>
+        <header
+          className="c-card__header"
+        >
+          <h2
+            className="c-heading u-medium"
+            style={
+              Object {
+                "overflow": "hidden",
+                "textOverflow": "ellipsis",
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            test movie
+          </h2>
+        </header>
+        <footer
+          className="c-card__footer"
+        >
+          <div
+            className="c-input-group"
+          >
+            <button
+              className="c-button c-button--block c-button--brand"
+              onClick={[Function]}
+            >
+              View
+            </button>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </div>
+</FilmCard>
+`;
